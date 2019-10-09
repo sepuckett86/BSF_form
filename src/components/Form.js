@@ -6,6 +6,7 @@ export default function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [acknowledgement, setAcknowledgement] = useState('');
 
   const encode = (data) => {
     return Object.keys(data)
@@ -56,6 +57,17 @@ export default function Form() {
           ></input>
         </label>
       </p>
+      <p>
+        <label>
+          Acknowledgement:
+          <input 
+            type="text" 
+            onChange={({ target }) => setAcknowledgement(target.value)}
+            value={acknowledgement}
+          ></input>
+        </label>
+      </p>
+      
       <Button />
     </form>
   );
